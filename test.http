@@ -1,0 +1,54 @@
+### Register User
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "doe@example.com",
+    "password": "password123",
+    "role": "customer"
+}
+
+### Login User
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "johndoe@example.com",
+    "password": "password123"
+}
+
+### Get All Products
+GET http://localhost:5000/api/products
+
+### Create Product
+POST http://localhost:5000/api/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2I3YzgwYWZiYWEyYTQ4NTZlNmNhNDYiLCJpYXQiOjE3NDAxMDE5NTQsImV4cCI6MTc0MDEwNTU1NH0.To5svesm588Wzw6hvVsE4o2LSxoH3D41RBCmD5VWYN0
+
+{
+    "name": "Gaming Laptop",
+    "price": 1200,
+    "description": "High-performance gaming laptop.",
+    "category": "Electronics",
+    "stock": 10
+}
+
+### Create Order
+POST http://localhost:5000/api/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2I3YzgwYWZiYWEyYTQ4NTZlNmNhNDYiLCJpYXQiOjE3NDAxMDIwMDQsImV4cCI6MTc0MDEwNTYwNH0.YEQD1z0rbU2Gqzhuncw99WZkjHmjsO3zuzuXiwlLBCc
+
+{
+    "products": [
+        {
+            "product": "67b7cb7a2f8b733b3830771d",
+            "quantity": 2
+        }
+    ],
+    "totalPrice": 2400
+}
+
+### Get Orders
+GET http://localhost:5000/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2I3YzgwYWZiYWEyYTQ4NTZlNmNhNDYiLCJpYXQiOjE3NDAxMDIwMDQsImV4cCI6MTc0MDEwNTYwNH0.YEQD1z0rbU2Gqzhuncw99WZkjHmjsO3zuzuXiwlLBCc
