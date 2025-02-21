@@ -32,7 +32,7 @@ This project is a backend API for an e-commerce platform built using **Node.js, 
 
 ### Clone Repository
 ```bash
-git clone <repository-url>
+git clone git@github.com:tajarik/advanced-database.git
 cd e-commerce-backend
 ```
 
